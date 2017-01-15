@@ -1,7 +1,7 @@
 {
   "name": "styled-property",
-  "version": "1.0.0",
-  "description": "Styled components helper that applies className for generated styles to a property.",
+  "version": "1.0.2",
+  "description": "styled-components helper that generates a set of styles and sets the auto-generated className for them as property on a wrapped component",
   "main": "build.js",
   "repository": {
     "type": "git",
