@@ -1,0 +1,38 @@
+{
+  "name": "styled-property",
+  "version": "1.0.0",
+  "description": "Styled components helper that applies className for generated styles to a property.",
+  "main": "build.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepunkt/styled-property.git"
+  },
+  "author": "Christoph Werner <christoph@codepunkt.de>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "component",
+    "styled-components",
+    "css",
+    "css-in-js"
+  ],
+  "scripts": {
+    "build": "babel index.js -o build.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "styled-components": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "coveralls": "^2.11.15",
+    "enzyme": "^2.7.0",
+    "jest": "^18.1.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
