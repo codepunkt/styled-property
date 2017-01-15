@@ -3,17 +3,20 @@
 
 [`styled-components`](https://github.com/styled-components/styled-components) helper that generates a set of styles and sets the auto-generated className for them as property on a wrapped component.
 
-# Usage
+## Installation
+```bash
+npm install styled-property
+```
+## Usage
 ```javascript
 import styledProperty from 'styled-property'
-
 // auto-generates a class selector for the given css and sets it
 // as "propName" property on the WrappedComponent.
 const Component = styledProperty(WrappedComponent, 'propName')`
   display: block;
 `
 ```
-# Use Cases
+## Use Cases
 Set default and active styles of `Link` component from [`react-router`](https://github.com/ReactTraining/react-router).
 ```javascript
 import { Link } from 'react-router'
