@@ -10,6 +10,7 @@ npm install styled-property
 ## Usage
 ```javascript
 import styledProperty from 'styled-property'
+
 // auto-generates a class selector for the given css and sets it
 // as "propName" property on the WrappedComponent.
 const Component = styledProperty(WrappedComponent, 'propName')`
@@ -30,7 +31,7 @@ const BaseLink = styled(Link)`
   text-decoration: none;
 `
 
-// create an additional set of style rules and set the "activeClassName
+// create an additional set of style rules and set the "activeClassName"
 // property of the wrapped component (BaseLink) to the auto-generated
 // className for those styles.
 const StyledLink = styledProperty(BaseLink, 'activeClassName')`
