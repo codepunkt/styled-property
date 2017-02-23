@@ -18,7 +18,11 @@ const Component = styledProperty(WrappedComponent, 'propName')`
 `
 ```
 ## Use Cases
+
+### react-router `Link`
+
 Set default and active styles of `Link` component from [`react-router`](https://github.com/ReactTraining/react-router).
+
 ```javascript
 import { Link } from 'react-router'
 import styled from 'styled-components'
@@ -36,5 +40,28 @@ const BaseLink = styled(Link)`
 // className for those styles.
 const StyledLink = styledProperty(BaseLink, 'activeClassName')`
   color: #bada55;
+`
+```
+
+### react-sticky `Sticky`
+
+Set default and sticky styles of `Sticky` component from [`react-sticky`](https://github.com/captivationsoftware/react-sticky).
+
+```javascript
+import { Sticky } from 'react-sticky'
+import styled from 'styled-components'
+import styledProperty from 'styled-property'
+
+// create basic Sticky styles
+const BaseSticky = styled(Sticky)`
+  margin-top: 0;
+  transition: margin-top .3s ease-in-out;
+`
+
+// create an additional set of style rules and set the "stickyClassName"
+// property of the wrapped component (BaseSticky) to the auto-generated
+// className for those styles.
+const StyledSticky = styledProperty(BaseSticky, 'stickyClassName')`
+  margin-top: 16px;
 `
 ```
