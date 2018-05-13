@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { mount } from 'enzyme'
+import { mount, configure } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import styledProperty from './index'
+
+configure({ adapter: new Adapter() });
 
 const StyledComponent = styled.div`
   color: #c0ff33;
@@ -16,7 +19,7 @@ describe('styledProperty', () => {
 
     const wrapper = mount(<StyledProp />)
     const { className } = wrapper.find('PassClassAsPropName').get(0).props
-    const property = wrapper.find('div').get(0).getAttribute(propertyName)
+    const property = wrapper.find('div').get(0).props[propertyName]
     expect(property).toEqual(className)
   })
 })
